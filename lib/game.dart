@@ -52,7 +52,7 @@ class _GameState extends State<Game> {
   }
 
   String _generateOpponentChoice() {
-    const choices = ['Ножницы', 'Бумага', 'Камень'];
+    const choices = ['Ножницы', 'Бумага', 'Камень', 'Ящерица', 'Спок'];
     return choices[Random().nextInt(choices.length)];
   }
 
@@ -60,7 +60,14 @@ class _GameState extends State<Game> {
     if (player == opponent) return 'Ничья!';
     if ((player == 'Ножницы' && opponent == 'Бумага') ||
         (player == 'Бумага' && opponent == 'Камень') ||
-        (player == 'Камень' && opponent == 'Ножницы')) {
+        (player == 'Камень' && opponent == 'Ножницы') ||
+        (player == 'Ножницы' && opponent == 'Ящерица') ||
+        (player == 'Бумага' && opponent == 'Спок') ||
+        (player == 'Камень' && opponent == 'Ящерица') ||
+        (player == 'Ящерица' && opponent == 'Бумага') ||
+        (player == 'Ящерица' && opponent == 'Спок') ||
+        (player == 'Спок' && opponent == 'Ножницы') ||
+        (player == 'Спок' && opponent == 'Камень')) {
       return 'Вы победили!';
     }
     return 'Вы проиграли!';

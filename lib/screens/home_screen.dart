@@ -27,6 +27,14 @@ class HomeScreen extends StatelessWidget {
             onPressed: () => onGameStarted('Камень'),
             label: 'Камень',
           ),
+          ItemButton(
+            onPressed: () => onGameStarted('Ящерица'),
+            label: 'Ящерица',
+          ),
+          ItemButton(
+            onPressed: () => onGameStarted('Спок'),
+            label: 'Спок',
+          ),
         ],
       ),
     );
