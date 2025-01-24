@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hw_25/widgets/decorated_text.dart';
+import 'package:hw_25/widgets/item_button.dart';
 
 class ResultsScreen extends StatelessWidget {
   final void Function() onGameRestarted;
+  final void Function() onViewStats;
   final String playerChoice;
   final String opponentChoice;
   final String resultMessage;
@@ -10,6 +12,7 @@ class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.onGameRestarted,
+    required this.onViewStats,
     required this.playerChoice,
     required this.opponentChoice,
     required this.resultMessage,
@@ -27,9 +30,14 @@ class ResultsScreen extends StatelessWidget {
           Text('Выбор противника: $opponentChoice',
               style: TextStyle(fontSize: 18)),
           SizedBox(height: 50),
-          ElevatedButton(
+          ItemButton(
             onPressed: onGameRestarted,
-            child: Text('Начать заново'),
+            label: 'Начать заново',
+          ),
+          SizedBox(height: 10),
+          ItemButton(
+            onPressed: onViewStats,
+            label: 'Посмотреть статистику',
           ),
         ],
       ),

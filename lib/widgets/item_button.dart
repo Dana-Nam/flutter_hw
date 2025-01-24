@@ -10,7 +10,7 @@ class ItemButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),
         ),
