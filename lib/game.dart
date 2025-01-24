@@ -27,7 +27,6 @@ class _GameState extends State<Game> {
       opponentChoice = _generateOpponentChoice();
       resultMessage = _determineWinner(playerChoice, opponentChoice);
 
-      // Обновляем статистику
       if (resultMessage == 'Вы победили!') {
         wins++;
       } else if (resultMessage == 'Вы проиграли!') {
