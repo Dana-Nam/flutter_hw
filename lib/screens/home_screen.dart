@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hw_25/widgets/decorated_text.dart';
+import 'package:hw_25/widgets/item_button.dart';
 
 class HomeScreen extends StatelessWidget {
   final void Function() onGameStarted;
@@ -10,19 +12,19 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Выбери свой ход'),
+          DecoratedText(label: 'Выбери свой ход'),
           SizedBox(height: 50),
-          ElevatedButton(
+          ItemButton(
             onPressed: onGameStarted,
-            child: Text('Scissors'),
+            label: 'Scissors',
           ),
-          ElevatedButton(
+          ItemButton(
             onPressed: onGameStarted,
-            child: Text('Paper'),
+            label: 'Paper',
           ),
-          ElevatedButton(
+          ItemButton(
             onPressed: onGameStarted,
-            child: Text('Rock'),
+            label: 'Rock',
           ),
         ],
       ),

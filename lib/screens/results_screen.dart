@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hw_25/widgets/decorated_text.dart';
 
 class ResultsScreen extends StatelessWidget {
   final void Function() onGameRestarted;
@@ -10,7 +11,11 @@ class ResultsScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Win/Loose'),
+          DecoratedText(label: 'Win/Loose'),
+          SizedBox(height: 50),
+          Text('Your choice:'),
+          Text("Opponent's choice:"),
+          SizedBox(height: 50),
           ElevatedButton(
             onPressed: onGameRestarted,
             child: Text('Restart'),
