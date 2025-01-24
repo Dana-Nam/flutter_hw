@@ -3,7 +3,8 @@ import 'package:hw_25/widgets/decorated_text.dart';
 import 'package:hw_25/widgets/item_button.dart';
 
 class HomeScreen extends StatelessWidget {
-  final void Function() onGameStarted;
+  final void Function(String playerChoice) onGameStarted;
+
   const HomeScreen({super.key, required this.onGameStarted});
 
   @override
@@ -15,16 +16,16 @@ class HomeScreen extends StatelessWidget {
           DecoratedText(label: 'Выбери свой ход'),
           SizedBox(height: 50),
           ItemButton(
-            onPressed: onGameStarted,
-            label: 'Scissors',
+            onPressed: () => onGameStarted('Ножницы'),
+            label: 'Ножницы',
           ),
           ItemButton(
-            onPressed: onGameStarted,
-            label: 'Paper',
+            onPressed: () => onGameStarted('Бумага'),
+            label: 'Бумага',
           ),
           ItemButton(
-            onPressed: onGameStarted,
-            label: 'Rock',
+            onPressed: () => onGameStarted('Камень'),
+            label: 'Камень',
           ),
         ],
       ),
